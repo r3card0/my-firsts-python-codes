@@ -1,11 +1,11 @@
-def run():
-    # pesos = input('Exchange pesos to dollars, please submit your amount: ')
-    # pesos = float(pesos)
-    # dollar_price = 20.21
-    # dollars = round(pesos / dollar_price, 2)
-    # print('Your amount in dollars is: $'+ str(dollars))
+def run(exchange_rate,dollar_price):
+    local_currency = input('Exchange '+ exchange_rate + ' to dollars, please submit your amount: ')
+    local_currency = float(local_currency)
+    dollars = round(local_currency / dollar_price, 2)
+    print('Your amount in dollars is: $'+ str(dollars))
+    
 
-    currency = input("""
+currency_menu = input("""
     Currencies.
     1. Mexican pesos
     2. Colombian pesos
@@ -13,34 +13,13 @@ def run():
     4. Brazil reales
     Choose an option please: """)
 
-    if currency == '1':
-        pesos = input('Exchange pesos to dollars, please submit your amount: ')
-        pesos = float(pesos)
-        dollar_price = 20.21
-        dollars = round(pesos / dollar_price, 2)
-        print('Your amount in dollars is: $'+ str(dollars))
-    elif currency == '2':
-        pesos = input('Exchange pesos to dollars, please submit your amount: ')
-        pesos = float(pesos)
-        dollar_price = 4046.68
-        dollars = round(pesos / dollar_price, 2)
-        print('Your amount in dollars is: $'+ str(dollars))
-    elif currency == '3':
-        pesos = input('Exchange pesos to dollars, please submit your amount: ')
-        pesos = float(pesos)
-        dollar_price = 102.58
-        dollars = round(pesos / dollar_price, 2)
-        print('Your amount in dollars is: $'+ str(dollars))
-    elif currency == '4':
-        pesos = input('Exchange reales to dollars, please submit your amount: ')
-        pesos = float(pesos)
-        dollar_price = 5.70
-        dollars = round(pesos / dollar_price, 2)
-        print('Your amount in dollars is: $'+ str(dollars))
-    else:
-        print('Incorrect! Please, choose a correct option!')
-
-
-
-if __name__ == '__main__':
-    run()
+if currency_menu  == '1':
+    run('mexican pesos', 20.21)       
+elif currency_menu  == '2':
+    run('colombian pesos', 4046.80)        
+elif currency_menu  == '3':
+    run('argentine pesos', 102.58)      
+elif currency_menu  == '4':
+    run('brazilian reales', 5.70)       
+else:
+    print('Incorrect! Please, choose a correct option!')
