@@ -10,7 +10,8 @@ currency_menu = input("""
     1. Mexican pesos
     2. Colombian pesos
     3. Argentine pesos
-    4. Brazil reales
+    4. Brazilian reales
+    5. Guatemala quetzales
     Choose an option please: """)
 
 if currency_menu  == '1':
@@ -20,6 +21,8 @@ elif currency_menu  == '2':
 elif currency_menu  == '3':
     run('argentine pesos', 102.58)      
 elif currency_menu  == '4':
-    run('brazilian reales', 5.70)       
+    run('brazilian reales', 5.70)
+elif currency_menu  == '5':
+    run('guatemalan quetzales', 7.79)       
 else:
     print('Incorrect! Please, choose a correct option!')
