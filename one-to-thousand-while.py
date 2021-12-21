@@ -4,13 +4,12 @@ def run():
 
 
     def one():
-        LIMIT = 1002
-        counter = 0
-        accumulated = counter + 1
-        while accumulated < LIMIT:
-            print(counter)
+        counter = 1
+        print(counter)
+        while counter < 1000:
             counter = counter + 1
-            accumulated = 1 + counter         
+            print(counter)
+                   
 
 
     one()
